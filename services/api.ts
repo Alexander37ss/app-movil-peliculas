@@ -7,6 +7,8 @@ export const TMDB_CONFIG = {
   },
 };
 
+console.log("API KEY:", process.env.EXPO_PUBLIC_MOVIE_API_KEY);
+
 export const fetchMovies = async ({ query }: { query: string }) => {
   const endpoint = query
     ? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
